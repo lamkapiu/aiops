@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: yaml2infa
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/lamkapiu/aiops.git
+    targetRevision: HEAD
+    path: /module2/zuoye2/tencent
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: 
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true

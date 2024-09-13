@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: yaml2infa-sercet
+  namespace: argocd
+  labels:
+    argocd.argoproj.io/secret-type: repository
+stringData:
+  url: https://github.com/lamkapiu/aiops.git
+  password: "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"
+  username: aiop
