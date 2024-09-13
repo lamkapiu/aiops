@@ -1,0 +1,18 @@
+apiVersion: redis.tencentcloud.crossplane.io/v1alpha1
+kind: Instance
+metadata:
+  name: my-redis-instance
+spec:
+  forProvider:
+    name: my-redis-instance
+    typeId: 6
+    availabilityZone: ap-hongkong-2
+    memSize: 512
+    vpcId: vpc-rsu53iqe
+    subnetId: subnet-09whcazv
+    passwordSecretRef:
+      name: redis-secret
+      key: password
+      namespace: default
+    tags:
+      Environment: dev
