@@ -1,4 +1,3 @@
-apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: yaml2infa
@@ -8,10 +7,10 @@ spec:
   source:
     repoURL: https://github.com/lamkapiu/aiops.git
     targetRevision: HEAD
-    path: /module2/zuoye2/tencent
+    path: module2/zuoye2/tencent/redis
   destination:
     server: https://kubernetes.default.svc
-    namespace: 
+    namespace: default 
   syncPolicy:
     automated:
       prune: true

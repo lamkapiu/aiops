@@ -7,5 +7,5 @@ metadata:
     argocd.argoproj.io/secret-type: repository
 stringData:
   url: https://github.com/lamkapiu/aiops.git
-  password: "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"
-  username: aiop
+  password: "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"
+  username: lamkapiu
