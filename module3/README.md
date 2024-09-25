@@ -41,7 +41,7 @@ $ helm install vote . -n vote --create-namespace
 ```
 #### 运行结果：
 
-![图片](https://github.com/lamkapiu/aiops/blob/master/module3/images/3png)
+![图片](https://github.com/lamkapiu/aiops/blob/master/module3/images/3.png)
 
 ![图片](https://github.com/lamkapiu/aiops/blob/master/module3/images/4.png)
 
