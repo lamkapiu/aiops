@@ -48,8 +48,7 @@ $ helm install vote . -n vote --create-namespace
 ### 销毁
 
 ```bash
-# 先删除 k3s state 和 argocd state，否则会出错
-$ terraform state rm 'helm_release.argo_cd'
+# 先删除 k3s state，否则会出错
 $ terraform state rm 'module.k3s'
 
 
