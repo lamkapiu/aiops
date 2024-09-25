@@ -57,4 +57,3 @@ $ terraform state rm 'module.k3s'
 $ terraform destroy -auto-approve
 ```
 
-
