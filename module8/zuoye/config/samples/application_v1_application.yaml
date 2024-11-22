@@ -1,0 +1,33 @@
+apiVersion: application.aiops.com/v1
+kind: Application
+metadata:
+  labels:
+    app.kubernetes.io/name: zuoye
+    app.kubernetes.io/managed-by: kustomize
+  name: application-sample
+spec:
+  # TODO(user): Add fields here
+  deployment:
+    image: nginx
+    replicas: 1
+    port: 80
+  service:
+    ports:
+      - port: 80
+        targetPort: 80
+  ingress:
+    ingressClassName: nginx
+    rules:
+      - host: example.foo.com
+        http:
+          paths:
+            - path: /
+              pathType: Prefix
+              backend:
+                service:
+                  name: application-sample
+                  port:
+                    number: 80
+  configMap:
+    lesson: "8"
+    from: aiops
